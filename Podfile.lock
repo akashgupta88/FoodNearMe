@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.7.0)
+  - EarlGrey (1.12.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - EarlGrey
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  EarlGrey: f7774b813c888ebdb9a21e612d67874d17d5a326
+
+PODFILE CHECKSUM: bdc3b39d686a2abb1d6c3ebeeab625fcd33b605a
+
+COCOAPODS: 1.0.1
