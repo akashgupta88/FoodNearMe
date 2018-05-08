@@ -10,6 +10,9 @@
 		3B2F1F7A652D8F5009DC2827 /* Pods_FoodNearMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE04A190F8FCEE26BD66AC7 /* Pods_FoodNearMeTests.framework */; };
 		5A93AD5C20A09A11009FEF41 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD5B20A09A11009FEF41 /* Venue.swift */; };
 		5A93AD6020A1753A009FEF41 /* VenueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD5F20A1753A009FEF41 /* VenueSpec.swift */; };
+		5A93AD6820A1AF48009FEF41 /* FourSquareRestConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD6720A1AF48009FEF41 /* FourSquareRestConnection.swift */; };
+		5A93AD6A20A1C846009FEF41 /* RestConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD6920A1C846009FEF41 /* RestConnection.swift */; };
+		5A93AD7120A1CB21009FEF41 /* FourSquareRestConnectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD7020A1CB21009FEF41 /* FourSquareRestConnectionSpec.swift */; };
 		5AD713F720A08FC000C2BDB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD713F620A08FC000C2BDB0 /* AppDelegate.m */; };
 		5AD713FD20A08FC000C2BDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD713FB20A08FC000C2BDB0 /* Main.storyboard */; };
 		5AD7140020A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AD713FE20A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld */; };
@@ -45,6 +48,9 @@
 		5A93AD5B20A09A11009FEF41 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		5A93AD5E20A1753A009FEF41 /* FoodNearMeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodNearMeTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A93AD5F20A1753A009FEF41 /* VenueSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueSpec.swift; sourceTree = "<group>"; };
+		5A93AD6720A1AF48009FEF41 /* FourSquareRestConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareRestConnection.swift; sourceTree = "<group>"; };
+		5A93AD6920A1C846009FEF41 /* RestConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestConnection.swift; sourceTree = "<group>"; };
+		5A93AD7020A1CB21009FEF41 /* FourSquareRestConnectionSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSquareRestConnectionSpec.swift; sourceTree = "<group>"; };
 		5AD713F220A08FC000C2BDB0 /* FoodNearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD713F520A08FC000C2BDB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AD713F620A08FC000C2BDB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -118,6 +124,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5A93AD6420A1A83F009FEF41 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5A93AD6720A1AF48009FEF41 /* FourSquareRestConnection.swift */,
+				5A93AD6920A1C846009FEF41 /* RestConnection.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5A93AD6F20A1CB00009FEF41 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5A93AD7020A1CB21009FEF41 /* FourSquareRestConnectionSpec.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		5AD713E920A08FC000C2BDB0 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +169,7 @@
 				5AD713F520A08FC000C2BDB0 /* AppDelegate.h */,
 				5AD713F620A08FC000C2BDB0 /* AppDelegate.m */,
 				5AD713FB20A08FC000C2BDB0 /* Main.storyboard */,
+				5A93AD6420A1A83F009FEF41 /* Network */,
 				5A93AD5A20A099D1009FEF41 /* Models */,
 				5AD7140120A08FC000C2BDB0 /* Assets.xcassets */,
 				5AD7140320A08FC000C2BDB0 /* LaunchScreen.storyboard */,
@@ -161,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				5A93AD5D20A17526009FEF41 /* Models */,
+				5A93AD6F20A1CB00009FEF41 /* Network */,
 				5AD7141320A08FC000C2BDB0 /* Info.plist */,
 				5A93AD5E20A1753A009FEF41 /* FoodNearMeTests-Bridging-Header.h */,
 			);
@@ -482,6 +507,8 @@
 			files = (
 				5AD713F720A08FC000C2BDB0 /* AppDelegate.m in Sources */,
 				5A93AD5C20A09A11009FEF41 /* Venue.swift in Sources */,
+				5A93AD6A20A1C846009FEF41 /* RestConnection.swift in Sources */,
+				5A93AD6820A1AF48009FEF41 /* FourSquareRestConnection.swift in Sources */,
 				5AD7140820A08FC000C2BDB0 /* main.m in Sources */,
 				5AD7140020A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld in Sources */,
 			);
@@ -492,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A93AD6020A1753A009FEF41 /* VenueSpec.swift in Sources */,
+				5A93AD7120A1CB21009FEF41 /* FourSquareRestConnectionSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
