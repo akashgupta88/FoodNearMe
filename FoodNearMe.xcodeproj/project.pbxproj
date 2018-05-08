@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3B2F1F7A652D8F5009DC2827 /* Pods_FoodNearMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE04A190F8FCEE26BD66AC7 /* Pods_FoodNearMeTests.framework */; };
-		5A93AD4F20A094D6009FEF41 /* FoodNearMeIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD4E20A094D6009FEF41 /* FoodNearMeIntegrationTests.swift */; };
+		5A93AD5C20A09A11009FEF41 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD5B20A09A11009FEF41 /* Venue.swift */; };
+		5A93AD6020A1753A009FEF41 /* VenueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD5F20A1753A009FEF41 /* VenueSpec.swift */; };
 		5AD713F720A08FC000C2BDB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD713F620A08FC000C2BDB0 /* AppDelegate.m */; };
 		5AD713FD20A08FC000C2BDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD713FB20A08FC000C2BDB0 /* Main.storyboard */; };
 		5AD7140020A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AD713FE20A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld */; };
 		5AD7140220A08FC000C2BDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7140120A08FC000C2BDB0 /* Assets.xcassets */; };
 		5AD7140520A08FC000C2BDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7140320A08FC000C2BDB0 /* LaunchScreen.storyboard */; };
 		5AD7140820A08FC000C2BDB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7140720A08FC000C2BDB0 /* main.m */; };
-		5AD7141220A08FC000C2BDB0 /* FoodNearMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7141120A08FC000C2BDB0 /* FoodNearMeTests.m */; };
 		F028A02F9BCC344AAB1A3ADF /* Pods_FoodNearMeIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1ABC8A19D4196BA5687C9D /* Pods_FoodNearMeIntegrationTests.framework */; };
 		FE2CB6BB38A69FC0E3920698 /* Pods_FoodNearMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B020963530EEE23091EFE0A1 /* Pods_FoodNearMe.framework */; };
 /* End PBXBuildFile section */
@@ -40,9 +40,11 @@
 /* Begin PBXFileReference section */
 		4FE04A190F8FCEE26BD66AC7 /* Pods_FoodNearMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodNearMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A93AD4C20A094D6009FEF41 /* FoodNearMeIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodNearMeIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A93AD4E20A094D6009FEF41 /* FoodNearMeIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodNearMeIntegrationTests.swift; sourceTree = "<group>"; };
 		5A93AD5020A094D6009FEF41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A93AD5620A09520009FEF41 /* FoodNearMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodNearMe-Bridging-Header.h"; sourceTree = "<group>"; };
+		5A93AD5B20A09A11009FEF41 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		5A93AD5E20A1753A009FEF41 /* FoodNearMeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodNearMeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		5A93AD5F20A1753A009FEF41 /* VenueSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueSpec.swift; sourceTree = "<group>"; };
 		5AD713F220A08FC000C2BDB0 /* FoodNearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD713F520A08FC000C2BDB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AD713F620A08FC000C2BDB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,7 +55,6 @@
 		5AD7140620A08FC000C2BDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD7140720A08FC000C2BDB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5AD7140D20A08FC000C2BDB0 /* FoodNearMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodNearMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AD7141120A08FC000C2BDB0 /* FoodNearMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodNearMeTests.m; sourceTree = "<group>"; };
 		5AD7141320A08FC000C2BDB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60A564C9D4B177E711C2D86B /* Pods-FoodNearMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNearMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodNearMe/Pods-FoodNearMe.release.xcconfig"; sourceTree = "<group>"; };
 		64643C78585A3E3C2DD24C36 /* Pods-FoodNearMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodNearMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodNearMe/Pods-FoodNearMe.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,10 +97,25 @@
 		5A93AD4D20A094D6009FEF41 /* FoodNearMeIntegrationTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A93AD4E20A094D6009FEF41 /* FoodNearMeIntegrationTests.swift */,
 				5A93AD5020A094D6009FEF41 /* Info.plist */,
 			);
 			path = FoodNearMeIntegrationTests;
+			sourceTree = "<group>";
+		};
+		5A93AD5A20A099D1009FEF41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A93AD5B20A09A11009FEF41 /* Venue.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5A93AD5D20A17526009FEF41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A93AD5F20A1753A009FEF41 /* VenueSpec.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5AD713E920A08FC000C2BDB0 = {
@@ -130,6 +146,7 @@
 				5AD713F520A08FC000C2BDB0 /* AppDelegate.h */,
 				5AD713F620A08FC000C2BDB0 /* AppDelegate.m */,
 				5AD713FB20A08FC000C2BDB0 /* Main.storyboard */,
+				5A93AD5A20A099D1009FEF41 /* Models */,
 				5AD7140120A08FC000C2BDB0 /* Assets.xcassets */,
 				5AD7140320A08FC000C2BDB0 /* LaunchScreen.storyboard */,
 				5AD7140620A08FC000C2BDB0 /* Info.plist */,
@@ -143,8 +160,9 @@
 		5AD7141020A08FC000C2BDB0 /* FoodNearMeTests */ = {
 			isa = PBXGroup;
 			children = (
-				5AD7141120A08FC000C2BDB0 /* FoodNearMeTests.m */,
+				5A93AD5D20A17526009FEF41 /* Models */,
 				5AD7141320A08FC000C2BDB0 /* Info.plist */,
+				5A93AD5E20A1753A009FEF41 /* FoodNearMeTests-Bridging-Header.h */,
 			);
 			path = FoodNearMeTests;
 			sourceTree = "<group>";
@@ -259,6 +277,7 @@
 					};
 					5AD7140C20A08FC000C2BDB0 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 5AD713F120A08FC000C2BDB0;
 					};
@@ -454,7 +473,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A93AD4F20A094D6009FEF41 /* FoodNearMeIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD713F720A08FC000C2BDB0 /* AppDelegate.m in Sources */,
+				5A93AD5C20A09A11009FEF41 /* Venue.swift in Sources */,
 				5AD7140820A08FC000C2BDB0 /* main.m in Sources */,
 				5AD7140020A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld in Sources */,
 			);
@@ -472,7 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD7141220A08FC000C2BDB0 /* FoodNearMeTests.m in Sources */,
+				5A93AD6020A1753A009FEF41 /* VenueSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +720,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AkashGupta.FoodNearMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodNearMeTests/Models/FoodNearMeTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodNearMeTests/FoodNearMeTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -721,7 +740,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AkashGupta.FoodNearMeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "FoodNearMeTests/Models/FoodNearMeTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodNearMeTests/FoodNearMeTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodNearMe.app/FoodNearMe";
