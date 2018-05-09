@@ -27,18 +27,10 @@
 		5AD7140220A08FC000C2BDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7140120A08FC000C2BDB0 /* Assets.xcassets */; };
 		5AD7140520A08FC000C2BDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7140320A08FC000C2BDB0 /* LaunchScreen.storyboard */; };
 		5AD7140820A08FC000C2BDB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7140720A08FC000C2BDB0 /* main.m */; };
-		F028A02F9BCC344AAB1A3ADF /* Pods_FoodNearMeIntegrationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1ABC8A19D4196BA5687C9D /* Pods_FoodNearMeIntegrationTests.framework */; };
 		FE2CB6BB38A69FC0E3920698 /* Pods_FoodNearMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B020963530EEE23091EFE0A1 /* Pods_FoodNearMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5A93AD5120A094D6009FEF41 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5AD713EA20A08FC000C2BDB0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AD713F120A08FC000C2BDB0;
-			remoteInfo = FoodNearMe;
-		};
 		5AD7140E20A08FC000C2BDB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5AD713EA20A08FC000C2BDB0 /* Project object */;
@@ -51,8 +43,6 @@
 /* Begin PBXFileReference section */
 		4FE04A190F8FCEE26BD66AC7 /* Pods_FoodNearMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodNearMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A23502F20A33BF700C453AC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		5A93AD4C20A094D6009FEF41 /* FoodNearMeIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodNearMeIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A93AD5020A094D6009FEF41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A93AD5620A09520009FEF41 /* FoodNearMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodNearMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A93AD5B20A09A11009FEF41 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		5A93AD5E20A1753A009FEF41 /* FoodNearMeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodNearMeTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -89,14 +79,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5A93AD4920A094D6009FEF41 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F028A02F9BCC344AAB1A3ADF /* Pods_FoodNearMeIntegrationTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5AD713EF20A08FC000C2BDB0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -122,14 +104,6 @@
 				5A23502F20A33BF700C453AC /* LocationManager.swift */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		5A93AD4D20A094D6009FEF41 /* FoodNearMeIntegrationTests */ = {
-			isa = PBXGroup;
-			children = (
-				5A93AD5020A094D6009FEF41 /* Info.plist */,
-			);
-			path = FoodNearMeIntegrationTests;
 			sourceTree = "<group>";
 		};
 		5A93AD5A20A099D1009FEF41 /* Models */ = {
@@ -207,7 +181,6 @@
 			children = (
 				5AD713F420A08FC000C2BDB0 /* FoodNearMe */,
 				5AD7141020A08FC000C2BDB0 /* FoodNearMeTests */,
-				5A93AD4D20A094D6009FEF41 /* FoodNearMeIntegrationTests */,
 				5AD713F320A08FC000C2BDB0 /* Products */,
 				648F07AFAEAFF42CEF7EB153 /* Pods */,
 				F247AFC856A6486E8AF824AD /* Frameworks */,
@@ -219,7 +192,6 @@
 			children = (
 				5AD713F220A08FC000C2BDB0 /* FoodNearMe.app */,
 				5AD7140D20A08FC000C2BDB0 /* FoodNearMeTests.xctest */,
-				5A93AD4C20A094D6009FEF41 /* FoodNearMeIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,27 +254,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5A93AD4B20A094D6009FEF41 /* FoodNearMeIntegrationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A93AD5520A094D6009FEF41 /* Build configuration list for PBXNativeTarget "FoodNearMeIntegrationTests" */;
-			buildPhases = (
-				F5ED0200FBAAFE89F9690FF6 /* [CP] Check Pods Manifest.lock */,
-				5A93AD4820A094D6009FEF41 /* Sources */,
-				5A93AD4920A094D6009FEF41 /* Frameworks */,
-				5A93AD4A20A094D6009FEF41 /* Resources */,
-				49EC334A1D99EC1052A62CFC /* [CP] Embed Pods Frameworks */,
-				CAE26BBF882668A02950F3CC /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5A93AD5220A094D6009FEF41 /* PBXTargetDependency */,
-			);
-			name = FoodNearMeIntegrationTests;
-			productName = FoodNearMeIntegrationTests;
-			productReference = 5A93AD4C20A094D6009FEF41 /* FoodNearMeIntegrationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		5AD713F120A08FC000C2BDB0 /* FoodNearMe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AD7141620A08FC000C2BDB0 /* Build configuration list for PBXNativeTarget "FoodNearMe" */;
@@ -354,11 +305,6 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Akash Gupta";
 				TargetAttributes = {
-					5A93AD4B20A094D6009FEF41 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 5AD713F120A08FC000C2BDB0;
-					};
 					5AD713F120A08FC000C2BDB0 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -387,19 +333,11 @@
 			targets = (
 				5AD713F120A08FC000C2BDB0 /* FoodNearMe */,
 				5AD7140C20A08FC000C2BDB0 /* FoodNearMeTests */,
-				5A93AD4B20A094D6009FEF41 /* FoodNearMeIntegrationTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		5A93AD4A20A094D6009FEF41 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5AD713F020A08FC000C2BDB0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -465,21 +403,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodNearMe/Pods-FoodNearMe-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		49EC334A1D99EC1052A62CFC /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodNearMeIntegrationTests/Pods-FoodNearMeIntegrationTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6263E9168D157D25C2B3E217 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,36 +419,6 @@
 			showEnvVarsInLog = 0;
 		};
 		9E165DDA5118B4DEF50333DA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CAE26BBF882668A02950F3CC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FoodNearMeIntegrationTests/Pods-FoodNearMeIntegrationTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5ED0200FBAAFE89F9690FF6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -558,13 +451,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5A93AD4820A094D6009FEF41 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		5AD713EE20A08FC000C2BDB0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -598,11 +484,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5A93AD5220A094D6009FEF41 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5AD713F120A08FC000C2BDB0 /* FoodNearMe */;
-			targetProxy = 5A93AD5120A094D6009FEF41 /* PBXContainerItemProxy */;
-		};
 		5AD7140F20A08FC000C2BDB0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5AD713F120A08FC000C2BDB0 /* FoodNearMe */;
@@ -630,43 +511,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		5A93AD5320A094D6009FEF41 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE253EC470B13B8AFF238642 /* Pods-FoodNearMeIntegrationTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FoodNearMeIntegrationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AkashGupta.FoodNearMeIntegrationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodNearMe.app/FoodNearMe";
-			};
-			name = Debug;
-		};
-		5A93AD5420A094D6009FEF41 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 65572A104E3FDC08B1410F53 /* Pods-FoodNearMeIntegrationTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FoodNearMeIntegrationTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = AkashGupta.FoodNearMeIntegrationTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodNearMe.app/FoodNearMe";
-			};
-			name = Release;
-		};
 		5AD7141420A08FC000C2BDB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -850,15 +694,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5A93AD5520A094D6009FEF41 /* Build configuration list for PBXNativeTarget "FoodNearMeIntegrationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5A93AD5320A094D6009FEF41 /* Debug */,
-				5A93AD5420A094D6009FEF41 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		5AD713ED20A08FC000C2BDB0 /* Build configuration list for PBXProject "FoodNearMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
