@@ -6,26 +6,26 @@
 //  Copyright © 2018 Akash Gupta. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-protocol VenueListView {
-    var presenter: VenueListPresentation { get set }
+protocol VenueListView: class {
+    var presenter: VenueListPresentation? { get set }
 
     func showNoVenueFoundMessage()
-    func showVenueData(_ viewModel: [VenueListViewModel])
+    func showVenueList(_ viewModel: VenueListViewModel)
 }
 
 protocol VenueListPresentation: class {
     weak var view: VenueListView? { get set }
-    var interactor: VenueListUseCase { get set }
-    var router: VenueListWireFrame { get set }
+    var interactor: VenueListUseCase { get }
+    var router: VenueListWireFrame { get }
 
     func viewWillAppear()
     func didSelectVenue(_ venue: Venue)
 }
 
 protocol VenueListUseCase: class {
-    weak var output: VenueListInteractorOutput { get set }
+    weak var output: VenueListInteractorOutput? { get set }
 
     func fetchVenueList()
 }
