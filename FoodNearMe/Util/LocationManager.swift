@@ -10,22 +10,36 @@ import Foundation
 import CoreLocation
 
 protocol LocationFetcher {
-    func getCurrentLocation(success: @escaping LocationHandler, failure: @escaping LocationErrorHandler)
+    func getCurrentLocation(handler: @escaping LocationHandler)
+}
+
+enum LocationResult {
+    case location(CLLocation)
+    case error(LocationError)
 }
 
 enum LocationError: Error {
     case servicesDisabled
     case notFound
     case otherError
+
+    func description() -> String {
+        switch self {
+        case .notFound:
+            return "We were not able to determine your location."
+        case .servicesDisabled:
+            return "Please turn on location services for this app."
+        case .otherError:
+            return "There was a problem getting your location."
+        }
+    }
 }
 
-typealias LocationHandler = (CLLocation) -> Void
-typealias LocationErrorHandler = (LocationError) -> Void
+typealias LocationHandler = (LocationResult) -> Void
 
 class LocationManager: NSObject {
 
-    var successHandler: LocationHandler?
-    var failureHandler: LocationErrorHandler?
+    var handler: LocationHandler?
 
     let locationManager: CLLocationManager
 
@@ -53,26 +67,24 @@ class LocationManager: NSObject {
     }
 
     private func sendLocation(_ location: CLLocation) {
-        successHandler?(location)
+        handler?(.location(location))
         clearHandlers()
     }
 
     private func sendError(_ error: LocationError) {
-        failureHandler?(error)
+        handler?(.error(error))
         clearHandlers()
     }
 
     private func clearHandlers() {
-        successHandler = nil
-        failureHandler = nil
+        handler = nil
     }
 }
 
 extension LocationManager: LocationFetcher {
 
-    func getCurrentLocation(success: @escaping LocationHandler, failure: @escaping LocationErrorHandler) {
-        successHandler = success
-        failureHandler = failure
+    func getCurrentLocation(handler: @escaping LocationHandler) {
+        self.handler = handler
         startFetchingLocation()
     }
 }
