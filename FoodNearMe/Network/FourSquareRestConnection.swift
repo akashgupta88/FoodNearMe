@@ -17,6 +17,10 @@ class FourSquareRestConnection: NSObject, FourSquareConnection {
 
     let restConnection: RestConnection
 
+    static func defaultInstance() -> FourSquareRestConnection {
+        return FourSquareRestConnection(restConnection: AlamofireRestConnection())
+    }
+
     init(restConnection: RestConnection) {
         self.restConnection = restConnection
     }
@@ -25,15 +29,16 @@ class FourSquareRestConnection: NSObject, FourSquareConnection {
 
         let parameters: Parameters = [
             "ll": "\(lat),\(lon)",
-            "clientId": "L1UYLAJCAD2LNEIS2TI0UBSVCZQ1BAGNBAQRROTLECH10OW3",
-            "clientSecret": "VCU2TPB4FN24A3GOPOTHDBC2XX2B5DYXQKNDLMKG2LSX1TH0",
+            "client_id": "L1UYLAJCAD2LNEIS2TI0UBSVCZQ1BAGNBAQRROTLECH10OW3",
+            "client_secret": "VCU2TPB4FN24A3GOPOTHDBC2XX2B5DYXQKNDLMKG2LSX1TH0",
             "v": "20180501",
             "categoryId": "4d4b7105d754a06374d81259"
         ]
 
         restConnection.get(url: "https://api.foursquare.com/v2/venues/search", parameters: parameters, success: { response in
+            print(response)
             guard let dict = response as? [String: Any],
-                let responseDict = dict["response"] as?[String: Any],
+                let responseDict = dict["response"] as? [String: Any],
                 let venueDicts = responseDict["venues"] as? [[String: Any]] else {
                     failure(NSError(domain: "com.foodnearme", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid response structure"]))
 
