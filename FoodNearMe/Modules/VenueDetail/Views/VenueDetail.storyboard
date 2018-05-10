@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Venue Detail-->
+        <scene sceneID="M94-0W-nyf">
+            <objects>
+                <viewController storyboardIdentifier="VenueDetail" title="Venue Detail" id="vKx-ys-DnU" customClass="VenueDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y0F-SX-M8m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C70-ek-23I">
+                                <rect key="frame" x="16" y="36" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaq-vr-lRt">
+                                <rect key="frame" x="16" y="76" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xBa-Ql-6Vj" firstAttribute="trailing" secondItem="jaq-vr-lRt" secondAttribute="trailing" constant="16" id="2y3-q9-4Fs"/>
+                            <constraint firstItem="C70-ek-23I" firstAttribute="top" secondItem="xBa-Ql-6Vj" secondAttribute="top" constant="16" id="Gm3-Ku-ML8"/>
+                            <constraint firstItem="jaq-vr-lRt" firstAttribute="leading" secondItem="xBa-Ql-6Vj" secondAttribute="leading" constant="16" id="HPi-2a-tDa"/>
+                            <constraint firstItem="xBa-Ql-6Vj" firstAttribute="trailing" secondItem="C70-ek-23I" secondAttribute="trailing" constant="16" id="JBG-Q4-Luy"/>
+                            <constraint firstItem="jaq-vr-lRt" firstAttribute="top" secondItem="C70-ek-23I" secondAttribute="bottom" constant="16" id="LqT-IF-uHY"/>
+                            <constraint firstItem="C70-ek-23I" firstAttribute="leading" secondItem="xBa-Ql-6Vj" secondAttribute="leading" constant="16" id="awK-hR-fo5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xBa-Ql-6Vj"/>
+                    </view>
+                    <connections>
+                        <outlet property="venueAddress" destination="jaq-vr-lRt" id="ThO-3f-arD"/>
+                        <outlet property="venueName" destination="C70-ek-23I" id="wlR-cv-4Z5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vuF-cL-5qB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="114.69265367316342"/>
+        </scene>
+    </scenes>
+</document>

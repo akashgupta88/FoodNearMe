@@ -8,28 +8,28 @@
 
 import Foundation
 
-class Venue: NSObject, Decodable {
+@objcMembers class Venue: NSObject, Decodable {
     let id: String
     let name: String
-    let location: Location
+    let location: VenueLocation
 
-    init(id: String, name: String, location: Location) {
+    init(id: String, name: String, location: VenueLocation) {
         self.id = id
         self.name = name
         self.location = location
     }
+}
 
-    class Location: NSObject, Decodable {
-        let formattedAddress: [String]
-        let lat: Double
-        let lng: Double
-        let distance: Double
+@objcMembers class VenueLocation: NSObject, Decodable {
+    let formattedAddress: [String]
+    let lat: Double
+    let lng: Double
+    let distance: Double
 
-        init(formattedAddress: [String], lat: Double, lng: Double, distance: Double) {
-            self.formattedAddress = formattedAddress
-            self.lat = lat
-            self.lng = lng
-            self.distance = distance
-        }
+    init(formattedAddress: [String], lat: Double, lng: Double, distance: Double) {
+        self.formattedAddress = formattedAddress
+        self.lat = lat
+        self.lng = lng
+        self.distance = distance
     }
 }

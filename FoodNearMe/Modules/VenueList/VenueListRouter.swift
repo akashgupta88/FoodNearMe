@@ -13,7 +13,8 @@ class VenueListRouter: VenueListWireFrame {
     weak var viewController: UIViewController?
 
     func presentVenueDetail(_ venue: Venue) {
-
+        let venueDetail = VenueDetailRouter.assembleModule(with: venue)
+        viewController?.navigationController?.pushViewController(venueDetail, animated: true)
     }
 
     func presentAlert(title: String, message: String, actionTitle: String?, action: (() -> Void)?) {
