@@ -37,7 +37,7 @@ extension VenueListPresenter: VenueListInteractorOutput {
     func venueListFetched(_ venues: [Venue]) {
         self.venues = venues
         let viewModels = venues.map {
-            VenueViewModel(name: $0.name, distance: "\($0.location.distance)", imageURL: "")
+            VenueViewModel(name: $0.name, distance: "\(Int($0.location.distance)) meters", imageURL: "")
         }
         self.view?.showVenueList(viewModels)
     }
