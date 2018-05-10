@@ -20,7 +20,7 @@ protocol VenueListPresentation: class {
     var interactor: VenueListUseCase { get }
     var router: VenueListWireFrame { get }
 
-    func viewWillAppear()
+    func viewDidLoad()
     func didSelectVenue(_ venue: Venue)
 }
 
@@ -32,13 +32,14 @@ protocol VenueListUseCase: class {
 
 protocol VenueListInteractorOutput: class {
     func venueListFetched(_ venues: [Venue])
-    func venueListFetchFailed()
+    func venueListFetchFailed(error: String?)
 }
 
 protocol VenueListWireFrame {
     weak var viewController: UIViewController? { get set }
 
     func presentVenueDetail(_ venue: Venue)
+    func presentAlert(title: String, message: String, actionTitle: String?, action:(() -> Void)?)
 
     static func assembleModule() -> UIViewController
 }

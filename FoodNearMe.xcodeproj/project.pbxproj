@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3B2F1F7A652D8F5009DC2827 /* Pods_FoodNearMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE04A190F8FCEE26BD66AC7 /* Pods_FoodNearMeTests.framework */; };
 		5A23503020A33BF700C453AC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23502F20A33BF700C453AC /* LocationManager.swift */; };
+		5A23503720A3797F00C453AC /* VenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23503620A3797F00C453AC /* VenueListViewController.swift */; };
+		5A23503920A3998600C453AC /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23503820A3998600C453AC /* RootRouter.swift */; };
+		5A23503D20A476AB00C453AC /* VenueListInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23503C20A476AB00C453AC /* VenueListInteractorSpec.swift */; };
+		5A23503F20A476BB00C453AC /* VenueListPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23503E20A476BB00C453AC /* VenueListPresenterSpec.swift */; };
+		5A23504120A476CC00C453AC /* VenueListRouterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A23504020A476CC00C453AC /* VenueListRouterSpec.swift */; };
 		5A93AD5C20A09A11009FEF41 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD5B20A09A11009FEF41 /* Venue.swift */; };
 		5A93AD6020A1753A009FEF41 /* VenueSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD5F20A1753A009FEF41 /* VenueSpec.swift */; };
 		5A93AD6820A1AF48009FEF41 /* FourSquareRestConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD6720A1AF48009FEF41 /* FourSquareRestConnection.swift */; };
@@ -20,9 +25,8 @@
 		5A93AD8220A21CC0009FEF41 /* VenueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD8120A21CC0009FEF41 /* VenueListViewModel.swift */; };
 		5A93AD8420A21DA9009FEF41 /* VenueListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD8320A21DA9009FEF41 /* VenueListRouter.swift */; };
 		5A93AD8720A221A3009FEF41 /* UIViewControllerFromNibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD8620A221A3009FEF41 /* UIViewControllerFromNibExtension.swift */; };
-		5A93AD8920A22566009FEF41 /* VenueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD8820A22566009FEF41 /* VenueListViewController.swift */; };
 		5AD713F720A08FC000C2BDB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD713F620A08FC000C2BDB0 /* AppDelegate.m */; };
-		5AD713FD20A08FC000C2BDB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD713FB20A08FC000C2BDB0 /* Main.storyboard */; };
+		5AD713FD20A08FC000C2BDB0 /* VenueList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD713FB20A08FC000C2BDB0 /* VenueList.storyboard */; };
 		5AD7140020A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AD713FE20A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld */; };
 		5AD7140220A08FC000C2BDB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7140120A08FC000C2BDB0 /* Assets.xcassets */; };
 		5AD7140520A08FC000C2BDB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7140320A08FC000C2BDB0 /* LaunchScreen.storyboard */; };
@@ -43,6 +47,11 @@
 /* Begin PBXFileReference section */
 		4FE04A190F8FCEE26BD66AC7 /* Pods_FoodNearMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodNearMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A23502F20A33BF700C453AC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		5A23503620A3797F00C453AC /* VenueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewController.swift; sourceTree = "<group>"; };
+		5A23503820A3998600C453AC /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		5A23503C20A476AB00C453AC /* VenueListInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListInteractorSpec.swift; sourceTree = "<group>"; };
+		5A23503E20A476BB00C453AC /* VenueListPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListPresenterSpec.swift; sourceTree = "<group>"; };
+		5A23504020A476CC00C453AC /* VenueListRouterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListRouterSpec.swift; sourceTree = "<group>"; };
 		5A93AD5620A09520009FEF41 /* FoodNearMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodNearMe-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A93AD5B20A09A11009FEF41 /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 		5A93AD5E20A1753A009FEF41 /* FoodNearMeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodNearMeTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -56,11 +65,10 @@
 		5A93AD8120A21CC0009FEF41 /* VenueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewModel.swift; sourceTree = "<group>"; };
 		5A93AD8320A21DA9009FEF41 /* VenueListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListRouter.swift; sourceTree = "<group>"; };
 		5A93AD8620A221A3009FEF41 /* UIViewControllerFromNibExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFromNibExtension.swift; sourceTree = "<group>"; };
-		5A93AD8820A22566009FEF41 /* VenueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewController.swift; sourceTree = "<group>"; };
 		5AD713F220A08FC000C2BDB0 /* FoodNearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD713F520A08FC000C2BDB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AD713F620A08FC000C2BDB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5AD713FC20A08FC000C2BDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5AD713FC20A08FC000C2BDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/VenueList.storyboard; sourceTree = "<group>"; };
 		5AD713FF20A08FC000C2BDB0 /* FoodNearMe.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodNearMe.xcdatamodel; sourceTree = "<group>"; };
 		5AD7140120A08FC000C2BDB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AD7140420A08FC000C2BDB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,12 +114,30 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		5A93AD5A20A099D1009FEF41 /* Models */ = {
+		5A23503A20A4124D00C453AC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5A23503B20A4125400C453AC /* VenueList */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5A23503B20A4125400C453AC /* VenueList */ = {
+			isa = PBXGroup;
+			children = (
+				5A23503C20A476AB00C453AC /* VenueListInteractorSpec.swift */,
+				5A23503E20A476BB00C453AC /* VenueListPresenterSpec.swift */,
+				5A23504020A476CC00C453AC /* VenueListRouterSpec.swift */,
+			);
+			path = VenueList;
+			sourceTree = "<group>";
+		};
+		5A93AD5A20A099D1009FEF41 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				5A93AD5B20A09A11009FEF41 /* Venue.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		5A93AD5D20A17526009FEF41 /* Models */ = {
@@ -142,12 +168,13 @@
 		5A93AD7420A1DA71009FEF41 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5A93AD7620A1DAB6009FEF41 /* Venue List */,
+				5A23503820A3998600C453AC /* RootRouter.swift */,
+				5A93AD7620A1DAB6009FEF41 /* VenueList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		5A93AD7620A1DAB6009FEF41 /* Venue List */ = {
+		5A93AD7620A1DAB6009FEF41 /* VenueList */ = {
 			isa = PBXGroup;
 			children = (
 				5A93AD7B20A219F1009FEF41 /* Views */,
@@ -157,13 +184,14 @@
 				5A93AD7F20A21B9F009FEF41 /* VenueListPresenter.swift */,
 				5A93AD8320A21DA9009FEF41 /* VenueListRouter.swift */,
 			);
-			path = "Venue List";
+			path = VenueList;
 			sourceTree = "<group>";
 		};
 		5A93AD7B20A219F1009FEF41 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5A93AD8820A22566009FEF41 /* VenueListViewController.swift */,
+				5AD713FB20A08FC000C2BDB0 /* VenueList.storyboard */,
+				5A23503620A3797F00C453AC /* VenueListViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,9 +229,8 @@
 			children = (
 				5AD713F520A08FC000C2BDB0 /* AppDelegate.h */,
 				5AD713F620A08FC000C2BDB0 /* AppDelegate.m */,
-				5AD713FB20A08FC000C2BDB0 /* Main.storyboard */,
 				5A93AD7420A1DA71009FEF41 /* Modules */,
-				5A93AD5A20A099D1009FEF41 /* Models */,
+				5A93AD5A20A099D1009FEF41 /* Entities */,
 				5A93AD6420A1A83F009FEF41 /* Network */,
 				5A23502E20A33BE700C453AC /* Util */,
 				5A93AD8520A2217F009FEF41 /* Extensions */,
@@ -220,6 +247,7 @@
 		5AD7141020A08FC000C2BDB0 /* FoodNearMeTests */ = {
 			isa = PBXGroup;
 			children = (
+				5A23503A20A4124D00C453AC /* Modules */,
 				5A93AD5D20A17526009FEF41 /* Models */,
 				5A93AD6F20A1CB00009FEF41 /* Network */,
 				5AD7141320A08FC000C2BDB0 /* Info.plist */,
@@ -344,7 +372,7 @@
 			files = (
 				5AD7140520A08FC000C2BDB0 /* LaunchScreen.storyboard in Resources */,
 				5AD7140220A08FC000C2BDB0 /* Assets.xcassets in Resources */,
-				5AD713FD20A08FC000C2BDB0 /* Main.storyboard in Resources */,
+				5AD713FD20A08FC000C2BDB0 /* VenueList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A93AD7820A1DADA009FEF41 /* VenueListContract.swift in Sources */,
+				5A23503920A3998600C453AC /* RootRouter.swift in Sources */,
 				5AD713F720A08FC000C2BDB0 /* AppDelegate.m in Sources */,
 				5A93AD8220A21CC0009FEF41 /* VenueListViewModel.swift in Sources */,
 				5A93AD8020A21B9F009FEF41 /* VenueListPresenter.swift in Sources */,
@@ -463,9 +492,9 @@
 				5A93AD6A20A1C846009FEF41 /* RestConnection.swift in Sources */,
 				5A93AD8420A21DA9009FEF41 /* VenueListRouter.swift in Sources */,
 				5A93AD6820A1AF48009FEF41 /* FourSquareRestConnection.swift in Sources */,
-				5A93AD8920A22566009FEF41 /* VenueListViewController.swift in Sources */,
 				5A23503020A33BF700C453AC /* LocationManager.swift in Sources */,
 				5A93AD8720A221A3009FEF41 /* UIViewControllerFromNibExtension.swift in Sources */,
+				5A23503720A3797F00C453AC /* VenueListViewController.swift in Sources */,
 				5AD7140820A08FC000C2BDB0 /* main.m in Sources */,
 				5A93AD7D20A21A0A009FEF41 /* VenueListInteractor.swift in Sources */,
 				5AD7140020A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld in Sources */,
@@ -477,7 +506,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A93AD6020A1753A009FEF41 /* VenueSpec.swift in Sources */,
+				5A23503F20A476BB00C453AC /* VenueListPresenterSpec.swift in Sources */,
+				5A23503D20A476AB00C453AC /* VenueListInteractorSpec.swift in Sources */,
 				5A93AD7120A1CB21009FEF41 /* FourSquareRestConnectionSpec.swift in Sources */,
+				5A23504120A476CC00C453AC /* VenueListRouterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,12 +524,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5AD713FB20A08FC000C2BDB0 /* Main.storyboard */ = {
+		5AD713FB20A08FC000C2BDB0 /* VenueList.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5AD713FC20A08FC000C2BDB0 /* Base */,
 			);
-			name = Main.storyboard;
+			name = VenueList.storyboard;
 			sourceTree = "<group>";
 		};
 		5AD7140320A08FC000C2BDB0 /* LaunchScreen.storyboard */ = {
