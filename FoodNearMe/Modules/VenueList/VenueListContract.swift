@@ -21,7 +21,7 @@ protocol VenueListPresentation: class {
     var router: VenueListWireFrame { get }
 
     func viewDidLoad()
-    func didSelectVenue(_ venue: Venue)
+    func didSelectVenue(index: Int)
 }
 
 protocol VenueListUseCase: class {

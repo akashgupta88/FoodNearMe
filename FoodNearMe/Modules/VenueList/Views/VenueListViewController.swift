@@ -56,3 +56,11 @@ extension VenueListViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension VenueListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        presenter?.didSelectVenue(index: indexPath.row)
+    }
+}

@@ -14,6 +14,8 @@ class VenueListPresenter: VenueListPresentation {
     let router: VenueListWireFrame
     let interactor: VenueListUseCase
 
+    var venues: [Venue]?
+
     init(router: VenueListWireFrame, interactor: VenueListUseCase) {
         self.router = router
         self.interactor = interactor
@@ -23,14 +25,17 @@ class VenueListPresenter: VenueListPresentation {
         interactor.fetchVenueList()
     }
 
-    func didSelectVenue(_ venue: Venue) {
-
+    func didSelectVenue(index: Int) {
+        if let venue = venues?[index] {
+            router.presentVenueDetail(venue)
+        }
     }
 }
 
 extension VenueListPresenter: VenueListInteractorOutput {
 
     func venueListFetched(_ venues: [Venue]) {
+        self.venues = venues
         let viewModels = venues.map {
             VenueViewModel(name: $0.name, distance: "\($0.location.distance)", imageURL: "")
         }

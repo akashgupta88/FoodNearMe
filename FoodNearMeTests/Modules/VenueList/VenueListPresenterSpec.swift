@@ -108,4 +108,11 @@ class VenueListPresenterSpec: XCTestCase {
         XCTAssertEqual(router.alertToPresent?.actionTitle, "Retry")
         XCTAssertTrue(router.alertToPresent?.action != nil)
     }
+
+    func testShouldHandleVenueSelection() {
+        presenter.viewDidLoad()
+        presenter.didSelectVenue(index: 0)
+
+        XCTAssertNotNil(router.venueDetailToPresent)
+    }
 }

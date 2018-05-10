@@ -15,8 +15,6 @@ class VenueListInteractor: VenueListUseCase {
     let connection: FourSquareConnection
     let locationFetcher: LocationFetcher
 
-    var venues: [Venue]?
-
     init(connection: FourSquareConnection, locationFetcher: LocationFetcher) {
         self.connection = connection
         self.locationFetcher = locationFetcher
@@ -29,7 +27,6 @@ class VenueListInteractor: VenueListUseCase {
                 self?.connection.fetchFoodVenues(lat: location.coordinate.latitude,
                                            lon: location.coordinate.longitude,
                                            success: { venues in
-                    self?.venues = venues
                     self?.output?.venueListFetched(venues)
                 }, failure: { error in
                     self?.output?.venueListFetchFailed(error: error.localizedDescription)
