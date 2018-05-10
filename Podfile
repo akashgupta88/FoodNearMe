@@ -13,12 +13,6 @@ target 'FoodNearMe' do
     # Pods for testing
   end
 
-target 'FoodNearMeIntegrationTests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod 'EarlGrey'
-end
-
 post_install do |installer|
     # Your list of targets here.
 
