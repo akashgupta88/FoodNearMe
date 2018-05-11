@@ -39,10 +39,10 @@ class MockFourSquareConnection: FourSquareConnection {
         } else {
             success([Venue(id: "someId",
                            name: "someName",
-                           location: Venue.Location(formattedAddress: [],
-                                                    lat: lat,
-                                                    lng: lon,
-                                                    distance: 0))])
+                           location: VenueLocation(formattedAddress: [],
+                                                   lat: lat,
+                                                   lng: lon,
+                                                   distance: 0))])
         }
     }
 }
