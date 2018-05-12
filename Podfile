@@ -11,6 +11,7 @@ target 'FoodNearMe' do
   target 'FoodNearMeTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'OCMock'
   end
 
 post_install do |installer|

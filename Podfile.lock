@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.7.0)
+  - OCMock (3.4.1)
 
 DEPENDENCIES:
   - Alamofire
+  - OCMock
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  OCMock: 2cd0716969bab32a2283ff3a46fd26a8c8b4c5e3
 
-PODFILE CHECKSUM: a89d090cef0eab5e55ea24d0e88efd1ad68f4e1a
+PODFILE CHECKSUM: e3a5a3b9675a2e0f02e46e7f02bf1eb72037994a
 
 COCOAPODS: 1.0.1

@@ -30,6 +30,9 @@
 		5A93AD8220A21CC0009FEF41 /* VenueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD8120A21CC0009FEF41 /* VenueListViewModel.swift */; };
 		5A93AD8420A21DA9009FEF41 /* VenueListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD8320A21DA9009FEF41 /* VenueListRouter.swift */; };
 		5A93AD8720A221A3009FEF41 /* UIViewControllerFromNibExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A93AD8620A221A3009FEF41 /* UIViewControllerFromNibExtension.swift */; };
+		5A94E02C20A61D6100534ACF /* VenueDetailInteractorSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94E02B20A61D6100534ACF /* VenueDetailInteractorSpec.m */; };
+		5A94E02E20A61D6F00534ACF /* VenueDetailPresenterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94E02D20A61D6F00534ACF /* VenueDetailPresenterSpec.m */; };
+		5A94E03020A61D7C00534ACF /* VenueDetailRouterSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A94E02F20A61D7C00534ACF /* VenueDetailRouterSpec.m */; };
 		5AD713F720A08FC000C2BDB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD713F620A08FC000C2BDB0 /* AppDelegate.m */; };
 		5AD713FD20A08FC000C2BDB0 /* VenueList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD713FB20A08FC000C2BDB0 /* VenueList.storyboard */; };
 		5AD7140020A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AD713FE20A08FC000C2BDB0 /* FoodNearMe.xcdatamodeld */; };
@@ -80,6 +83,9 @@
 		5A93AD8120A21CC0009FEF41 /* VenueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListViewModel.swift; sourceTree = "<group>"; };
 		5A93AD8320A21DA9009FEF41 /* VenueListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueListRouter.swift; sourceTree = "<group>"; };
 		5A93AD8620A221A3009FEF41 /* UIViewControllerFromNibExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerFromNibExtension.swift; sourceTree = "<group>"; };
+		5A94E02B20A61D6100534ACF /* VenueDetailInteractorSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenueDetailInteractorSpec.m; sourceTree = "<group>"; };
+		5A94E02D20A61D6F00534ACF /* VenueDetailPresenterSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenueDetailPresenterSpec.m; sourceTree = "<group>"; };
+		5A94E02F20A61D7C00534ACF /* VenueDetailRouterSpec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenueDetailRouterSpec.m; sourceTree = "<group>"; };
 		5AD713F220A08FC000C2BDB0 /* FoodNearMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodNearMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD713F520A08FC000C2BDB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AD713F620A08FC000C2BDB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				5A23503B20A4125400C453AC /* VenueList */,
+				5A94E02820A61D1300534ACF /* VenueDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -243,6 +250,16 @@
 				5A93AD8620A221A3009FEF41 /* UIViewControllerFromNibExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5A94E02820A61D1300534ACF /* VenueDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5A94E02D20A61D6F00534ACF /* VenueDetailPresenterSpec.m */,
+				5A94E02B20A61D6100534ACF /* VenueDetailInteractorSpec.m */,
+				5A94E02F20A61D7C00534ACF /* VenueDetailRouterSpec.m */,
+			);
+			path = VenueDetail;
 			sourceTree = "<group>";
 		};
 		5AD713E920A08FC000C2BDB0 = {
@@ -551,8 +568,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A94E02E20A61D6F00534ACF /* VenueDetailPresenterSpec.m in Sources */,
+				5A94E02C20A61D6100534ACF /* VenueDetailInteractorSpec.m in Sources */,
 				5A93AD6020A1753A009FEF41 /* VenueSpec.swift in Sources */,
 				5A23503F20A476BB00C453AC /* VenueListPresenterSpec.swift in Sources */,
+				5A94E03020A61D7C00534ACF /* VenueDetailRouterSpec.m in Sources */,
 				5A23503D20A476AB00C453AC /* VenueListInteractorSpec.swift in Sources */,
 				5A93AD7120A1CB21009FEF41 /* FourSquareRestConnectionSpec.swift in Sources */,
 				5A23504120A476CC00C453AC /* VenueListRouterSpec.swift in Sources */,
@@ -702,6 +722,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = FoodNearMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AkashGupta.FoodNearMe;
@@ -720,6 +741,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = FoodNearMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AkashGupta.FoodNearMe;
@@ -738,6 +760,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"";
 				INFOPLIST_FILE = FoodNearMeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AkashGupta.FoodNearMeTests;
@@ -758,6 +781,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "\"$(TARGET_TEMP_DIR)/../$(PROJECT_NAME).build/DerivedSources\"";
 				INFOPLIST_FILE = FoodNearMeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AkashGupta.FoodNearMeTests;
