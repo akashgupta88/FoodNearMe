@@ -43,6 +43,8 @@ class VenueListRouterSpec: XCTestCase {
         XCTAssertTrue(viewController.presenter?.router is VenueListRouter)
         XCTAssertTrue(viewController.presenter?.interactor.output === viewController.presenter)
         XCTAssertEqual(viewController.presenter?.router.viewController, viewController)
+        XCTAssertTrue(viewController.presenter?.interactor.dataProvider is VenueListDataManager)
+        XCTAssertTrue(viewController.presenter?.interactor.dataProvider?.dataStore is VenueCoreDataStore)
     }
     
     func testShouldPresentAlert() {

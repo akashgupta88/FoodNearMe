@@ -30,16 +30,18 @@ class VenueListPresenter: VenueListPresentation {
             router.presentVenueDetail(venue)
         }
     }
+
+    func viewWillAppear() {
+        if let list = venues {
+            interactor.filterVenueList(list)
+        }
+    }
 }
 
 extension VenueListPresenter: VenueListInteractorOutput {
 
     func venueListFetched(_ venues: [Venue]) {
-        self.venues = venues
-        let viewModels = venues.map {
-            VenueViewModel(name: $0.name, distance: "\(Int($0.location.distance)) meters", imageURL: "")
-        }
-        self.view?.showVenueList(viewModels)
+        interactor.filterVenueList(venues)
     }
 
     func venueListFetchFailed(error: String?) {
@@ -48,5 +50,13 @@ extension VenueListPresenter: VenueListInteractorOutput {
                                  actionTitle: "Retry",
                                  action: { self.interactor.fetchVenueList() })
         self.view?.showNoVenueFoundMessage()
+    }
+
+    func venueListFiltered(_ venues: [Venue]) {
+        self.venues = venues
+        let viewModels = venues.map {
+            VenueViewModel(name: $0.name, distance: "\(Int($0.location.distance)) meters", imageURL: "")
+        }
+        self.view?.showVenueList(viewModels)
     }
 }

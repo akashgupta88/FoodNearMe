@@ -14,6 +14,7 @@ private class MockInteractorOutput: VenueListInteractorOutput {
 
     var venuesFetched: [Venue]?
     var venuesFailedError: String?
+    var filteredVenueList: [Venue]?
 
     func venueListFetched(_ venues: [Venue]) {
         venuesFetched = venues
@@ -21,6 +22,10 @@ private class MockInteractorOutput: VenueListInteractorOutput {
 
     func venueListFetchFailed(error: String?) {
         venuesFailedError = error
+    }
+
+    func venueListFiltered(_ venues: [Venue]) {
+        filteredVenueList = venues
     }
 }
 
@@ -61,11 +66,24 @@ class MockLocationFetcher: LocationFetcher {
     }
 }
 
+class MockDataManager: VenueListDataProvider {
+
+    var dataStore: VenueDataStore?
+
+    var getDislikedVenueIdsCalled = false
+
+    func getDislikedVenueIds(handler: @escaping ([String]) -> Void) {
+        getDislikedVenueIdsCalled = true
+        handler(["someOtherId"])
+    }
+}
+
 class VenueListInteractorSpec: XCTestCase {
 
     var interactor: VenueListInteractor!
     var connection: MockFourSquareConnection!
     var locationFetcher: MockLocationFetcher!
+    var dataManager: MockDataManager!
     private var output: MockInteractorOutput!
     
     override func setUp() {
@@ -74,8 +92,10 @@ class VenueListInteractorSpec: XCTestCase {
         connection = MockFourSquareConnection()
         locationFetcher = MockLocationFetcher()
         output = MockInteractorOutput()
+        dataManager = MockDataManager()
         interactor = VenueListInteractor(connection: connection, locationFetcher: locationFetcher)
         interactor.output = output
+        interactor.dataProvider = dataManager
     }
     
     override func tearDown() {
@@ -113,5 +133,24 @@ class VenueListInteractorSpec: XCTestCase {
         XCTAssertTrue(connection.fetchFoodVenuesCalled)
         XCTAssertNotNil(output.venuesFailedError)
         XCTAssertNil(output.venuesFetched)
+    }
+
+    func testShouldFilterDislikedVenueIds() {
+        interactor.filterVenueList([Venue(id: "someId",
+                                          name: "someName",
+                                          location: VenueLocation(formattedAddress: [],
+                                                                  lat: 123.4,
+                                                                  lng: 567.8,
+                                                                  distance: 0)),
+                                    Venue(id: "someOtherId",
+                                          name: "someOtherName",
+                                          location: VenueLocation(formattedAddress: [],
+                                                                  lat: 432.1,
+                                                                  lng: 876.5,
+                                                                  distance: 0))])
+
+        XCTAssertTrue(dataManager.getDislikedVenueIdsCalled)
+        XCTAssertEqual(output.filteredVenueList?.count, 1)
+        XCTAssertEqual(output.filteredVenueList?.first?.id, "someId")
     }
 }

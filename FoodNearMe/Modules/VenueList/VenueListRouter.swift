@@ -31,10 +31,13 @@ class VenueListRouter: VenueListWireFrame {
         let router = VenueListRouter()
         let interactor = VenueListInteractor(connection: FourSquareRestConnection.defaultInstance(), locationFetcher: LocationManager.sharedInstance)
         let presenter = VenueListPresenter(router: router, interactor: interactor)
+        let dataManager = VenueListDataManager()
+        dataManager.dataStore = VenueCoreDataStore()
 
         viewController.presenter = presenter
         presenter.view = viewController
         interactor.output = presenter
+        interactor.dataProvider = dataManager
         router.viewController = viewController
 
         return viewController

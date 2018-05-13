@@ -26,6 +26,7 @@ class VenueListViewController: UIViewController, VenueListView {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        presenter?.viewWillAppear()
     }
 
     func showNoVenueFoundMessage() {

@@ -10,10 +10,13 @@ import XCTest
 @testable import FoodNearMe
 
 private class MockInteractor: VenueListUseCase {
+    var dataProvider: VenueListDataProvider?
+
     var output: VenueListInteractorOutput?
     
     var fetchVenueListCalled = false
     var failFetch = false
+    var venueListToFilter: [Venue]?
     
     func fetchVenueList() {
         fetchVenueListCalled = true
@@ -28,6 +31,11 @@ private class MockInteractor: VenueListUseCase {
                                                                     lng: 567.8,
                                                                     distance: 0))])
         }
+    }
+
+    func filterVenueList(_ venues: [Venue]) {
+        venueListToFilter = venues
+        output?.venueListFiltered(venues)
     }
 }
 
@@ -90,8 +98,9 @@ class VenueListPresenterSpec: XCTestCase {
     
     func testShouldFetchFoodVenuesOnViewLoad() {
         presenter.viewDidLoad()
-        
+
         XCTAssertTrue(interactor.fetchVenueListCalled)
+        XCTAssertEqual(interactor.venueListToFilter?.count, 1)
         XCTAssertEqual(view.venueListToShow?.count, 1)
     }
     
@@ -114,5 +123,17 @@ class VenueListPresenterSpec: XCTestCase {
         presenter.didSelectVenue(index: 0)
         
         XCTAssertNotNil(router.venueDetailToPresent)
+    }
+
+    func testShouldFilterVenueListOnViewAppear() {
+        presenter.venues = [Venue(id: "someId",
+                                  name: "someName",
+                                  location: VenueLocation(formattedAddress: [],
+                                                          lat: 123.4,
+                                                          lng: 567.8,
+                                                          distance: 0))]
+        presenter.viewWillAppear()
+
+        XCTAssertEqual(interactor.venueListToFilter?.count, 1)
     }
 }

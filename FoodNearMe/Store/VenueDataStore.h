@@ -8,6 +8,8 @@
 
 @class Venue;
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void(^DislikedVenueFetchHandler)(NSArray <NSString*> *venueIds);
 
 @protocol VenueDataStore <NSObject>
@@ -17,3 +19,5 @@ typedef void(^DislikedVenueFetchHandler)(NSArray <NSString*> *venueIds);
 - (void)saveDislikedVenueWithID:(NSString*)venueId;
 
 @end
+
+NS_ASSUME_NONNULL_END

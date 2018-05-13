@@ -10,7 +10,9 @@ import Foundation
 
 class VenueListInteractor: VenueListUseCase {
 
+
     weak var output: VenueListInteractorOutput?
+    var dataProvider: VenueListDataProvider?
 
     let connection: FourSquareConnection
     let locationFetcher: LocationFetcher
@@ -35,5 +37,11 @@ class VenueListInteractor: VenueListUseCase {
                 self?.output?.venueListFetchFailed(error: locationError.description())
             }
         }
+    }
+
+    func filterVenueList(_ venues: [Venue]) {
+        dataProvider?.getDislikedVenueIds(handler: { [weak self] venueIds in
+            self?.output?.venueListFiltered(venues.filter { !venueIds.contains($0.id) })
+        })
     }
 }
