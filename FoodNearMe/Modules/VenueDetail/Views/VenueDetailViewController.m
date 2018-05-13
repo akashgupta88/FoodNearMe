@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *venueName;
 @property (weak, nonatomic) IBOutlet UILabel *venueAddress;
 
+- (IBAction)dislikeTapped:(id)sender;
+
 @end
 
 @implementation VenueDetailViewController
@@ -30,6 +32,10 @@
 -(void)showVenueDetail:(Venue *)venue {
     _venueName.text = venue.name;
     _venueAddress.text = [venue.location.formattedAddress componentsJoinedByString:@"\n"];
+}
+
+- (void)dislikeTapped:(id)sender {
+    [_presenter dislikeTapped];
 }
 
 @end

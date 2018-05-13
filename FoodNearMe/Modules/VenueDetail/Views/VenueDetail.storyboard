@@ -30,15 +30,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vjb-CE-QGL">
+                                <rect key="frame" x="16" y="113" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="CtV-YG-Qk9"/>
+                                </constraints>
+                                <state key="normal" title="👎"/>
+                                <connections>
+                                    <action selector="dislikeTapped:" destination="vKx-ys-DnU" eventType="touchUpInside" id="cPX-Nl-F5S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xBa-Ql-6Vj" firstAttribute="trailing" secondItem="jaq-vr-lRt" secondAttribute="trailing" constant="16" id="2y3-q9-4Fs"/>
+                            <constraint firstItem="Vjb-CE-QGL" firstAttribute="leading" secondItem="xBa-Ql-6Vj" secondAttribute="leading" constant="16" id="ES0-BB-tFv"/>
                             <constraint firstItem="C70-ek-23I" firstAttribute="top" secondItem="xBa-Ql-6Vj" secondAttribute="top" constant="16" id="Gm3-Ku-ML8"/>
                             <constraint firstItem="jaq-vr-lRt" firstAttribute="leading" secondItem="xBa-Ql-6Vj" secondAttribute="leading" constant="16" id="HPi-2a-tDa"/>
                             <constraint firstItem="xBa-Ql-6Vj" firstAttribute="trailing" secondItem="C70-ek-23I" secondAttribute="trailing" constant="16" id="JBG-Q4-Luy"/>
                             <constraint firstItem="jaq-vr-lRt" firstAttribute="top" secondItem="C70-ek-23I" secondAttribute="bottom" constant="16" id="LqT-IF-uHY"/>
                             <constraint firstItem="C70-ek-23I" firstAttribute="leading" secondItem="xBa-Ql-6Vj" secondAttribute="leading" constant="16" id="awK-hR-fo5"/>
+                            <constraint firstItem="xBa-Ql-6Vj" firstAttribute="trailing" secondItem="Vjb-CE-QGL" secondAttribute="trailing" constant="16" id="ehO-8d-mBM"/>
+                            <constraint firstItem="Vjb-CE-QGL" firstAttribute="top" secondItem="jaq-vr-lRt" secondAttribute="bottom" constant="16" id="mJK-pg-zRF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xBa-Ql-6Vj"/>
                     </view>

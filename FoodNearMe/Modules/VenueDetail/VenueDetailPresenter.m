@@ -16,4 +16,9 @@
     [_view showVenueDetail: _venue];
 }
 
+- (void)dislikeTapped {
+    [_interactor dislikeVenue: _venue];
+    [_router routeToVenueList];
+}
+
 @end

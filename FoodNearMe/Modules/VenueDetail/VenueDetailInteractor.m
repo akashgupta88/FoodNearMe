@@ -10,6 +10,10 @@
 
 @implementation VenueDetailInteractor
 
-@synthesize output = _output;
+@synthesize output = _output, dataProvider = _dataProvider;
+
+-(void)dislikeVenue:(Venue *)venue {
+    [_dataProvider dislikeVenue:venue];
+}
 
 @end

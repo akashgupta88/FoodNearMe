@@ -12,6 +12,8 @@
 #import "VenueDetailViewController.h"
 #import "VenueDetailPresenter.h"
 #import "VenueDetailInteractor.h"
+#import "VenueDetailDataManager.h"
+#import "VenueCoreDataStore.h"
 
 @interface VenueDetailRouterSpec : XCTestCase
 
@@ -42,6 +44,8 @@
     XCTAssertTrue([viewController.presenter.interactor isKindOfClass:[VenueDetailInteractor class]]);
     XCTAssertTrue([viewController.presenter.interactor.output isEqual:viewController.presenter]);
     XCTAssertTrue([viewController.presenter.venue isEqual:venue]);
+    XCTAssertTrue([viewController.presenter.interactor.dataProvider isKindOfClass:[VenueDetailDataManager class]]);
+    XCTAssertTrue([viewController.presenter.interactor.dataProvider.dataStore isKindOfClass:[VenueCoreDataStore class]]);
 }
 
 @end

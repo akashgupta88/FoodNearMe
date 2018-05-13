@@ -9,7 +9,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class Venue, UIViewController;
-@protocol VenueDetailPresentation, VenueDetailUseCase, VenueDetailInteractorOutput, VenueDetailWireFrame;
+@protocol VenueDetailPresentation, VenueDetailUseCase, VenueDetailInteractorOutput, VenueDetailWireFrame, VenueDetailDataProvider;
+@protocol VenueDataStore;
 
 @protocol VenueDetailView <NSObject>
 
@@ -28,11 +29,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 -(void) viewDidLoad;
 
+- (void) dislikeTapped;
+
 @end
 
 @protocol VenueDetailUseCase <NSObject>
 
 @property (weak, nonatomic) id <VenueDetailInteractorOutput> output;
+@property (strong, nonatomic) id <VenueDetailDataProvider> dataProvider;
+
+- (void) dislikeVenue: (Venue*)venue;
 
 @end
 
@@ -45,6 +51,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) UIViewController *viewController;
 
 +(UIViewController*)assembleModuleWithVenue:(Venue*)venue;
+
+-(void) routeToVenueList;
+
+@end
+
+@protocol VenueDetailDataProvider <NSObject>
+
+@property (strong, nonatomic) id <VenueDataStore> dataStore;
+
+-(void)dislikeVenue:(Venue*)venue;
 
 @end
 

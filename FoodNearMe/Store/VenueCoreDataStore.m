@@ -73,4 +73,10 @@
     return newEntry;
 }
 
+-(void)saveDislikedVenueWithID:(NSString *)venueId {
+    DislikedVenue *venue = [self newDislikedVenue];
+    venue.venueId = venueId;
+    [self saveContext];
+}
+
 @end
